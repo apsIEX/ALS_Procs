@@ -1,0 +1,167 @@
+/*	WaveAccessWinCustom.rc -- resources for WaveAccess on Windows
+
+	This file is compiled by the resource compiler and creates XOP-specific
+	resources that IGOR looks for in an XOP module.
+*/
+
+#include "XOPResources.h"			// Defines XOP-specific symbols.
+
+/* Custom error messages */
+1100 STR#
+BEGIN
+	"WaveAccess requires Igor Pro 5.0 or later.\0",		// OLD_IGOR
+	"Wave does not exist.\0",							// NON_EXISTENT_WAVE
+	"This function requires a 3D wave.\0",				// NEEDS_3D_WAVE
+	"Source wave should be 2D\0",
+	"Binfacotrs must be greater than zero\0",
+	"Bad axis wave\0",
+	"Bad bin wave\0",
+	"Norm wave size doesn't match source wave\0",
+
+
+	"\0"							// NOTE: NULL required to terminate the resource.
+END
+
+
+
+1100 XOPI							// XOPI - Describes general XOP properties to IGOR. 
+BEGIN
+	XOP_VERSION,					// Version number of host XOP system.
+	DEV_SYS_CODE,					// Code for development system used to make XOP.
+	0,								// Obsolete - set to zero.
+	0,								// Obsolete - set to zero.
+	XOP_TOOLKIT_VERSION				// XOP Toolkit version.
+END
+
+1100 XOPF
+BEGIN
+
+		"BinAndCopy2Dto3D\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			NT_FP64,						/* dest layer		*/	
+			WAVE_TYPE,						/* src				*/
+			NT_FP64,						/*xbin				*/
+			NT_FP64,						/*ybin				*/
+		0,
+
+		"ExtractPlane\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3				*/
+		0,
+
+		"ExtractPlaneBin\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			WAVE_TYPE,						/*bin				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3				*/
+		0,
+		
+		"ExtractBeamBin\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			WAVE_TYPE,						/*bin				*/
+			NT_FP64,						/*x1				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3				*/
+		0,
+
+//		"CalcNorm\0",			/* function name */
+//		F_WAVE | F_EXTERNAL,				/* function category */
+//		NT_FP64,							/* return value type */			
+//		
+//			WAVE_TYPE,						/*dest				*/
+//			WAVE_TYPE,						/*src				*/
+//			NT_FP64,						/*axis				*/
+//			NT_FP64,						/*x1				*/
+//			NT_FP64,						/*x2				*/
+//		0,
+		
+		"CalcNorm\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*scale				*/
+			WAVE_TYPE,						/*src				*/
+			NT_FP64,						/*method				*/
+			NT_FP64,						/*axis				*/
+			NT_FP64,						/*x1				*/
+			NT_FP64,						/*x2				*/
+		0,
+	
+		"CalcNorm2\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*scale				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*norm				*/
+			NT_FP64,						/*method				*/
+			NT_FP64,						/*axis				*/
+			NT_FP64,						/*x1				*/
+			NT_FP64,						/*x2				*/
+		0,
+
+		"ExtractPlaneBinNorm\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			WAVE_TYPE,						/*bin				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3		*/
+			WAVE_TYPE,						/*normwave				*/
+		0,
+		
+		
+		"ExtractBeamBinNorm\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			WAVE_TYPE,						/*bin				*/
+			NT_FP64,						/*x1				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3		*/
+			WAVE_TYPE,						/*normwave				*/
+		0,
+		
+		"ExtractPlaneBinNorm2\0",			/* function name */
+		F_WAVE | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+		
+			WAVE_TYPE,						/*dest				*/
+			WAVE_TYPE,						/*src				*/
+			WAVE_TYPE,						/*axis				*/
+			WAVE_TYPE,						/*bin				*/
+			NT_FP64,						/*x2				*/
+			NT_FP64,						/*x3		*/
+			WAVE_TYPE,						/*normwave1				*/
+			WAVE_TYPE,						/*normwave2				*/
+		0,
+
+	0,
+		
+END
+

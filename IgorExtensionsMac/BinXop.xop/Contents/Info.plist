@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>fits</string>
+				<string>FITS</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>icon_149_FITS_igor_FITS.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>Igor Pro FITS Image File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>FITS</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>BinXop</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.carbonbundletemplate.xopbin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>IXOP</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>IGR0</string>
+	<key>CFBundleVersion</key>
+	<string>5.53</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>
