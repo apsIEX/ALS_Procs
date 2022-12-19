@@ -1,7 +1,7 @@
-## Subset of procedures that were developed at the ALS including ImageTool
+# Subset of procedures that were developed at the ALS including ImageTool
 Using the ALS_Wavemetrics_IEX procedures you will need to copy or make alias for the following:
 
-## Folder structure
+### Folder structure
 Igor Extensions 
 	BinXOP.xop
 
