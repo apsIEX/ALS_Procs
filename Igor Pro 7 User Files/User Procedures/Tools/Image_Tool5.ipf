@@ -7,7 +7,6 @@
 #include "JSON_Util"
 #include "Image_Tool5_API"
 #include "progresswindow"
-
 	static constant MAJOR_VERSION = 5.90
 	static constant MINOR_VERSION = 0
 
@@ -17,7 +16,7 @@
 //5.83 ER Integration of Advanced Peak Fitter
 //5/84 ER New ROI Integration method
 //5.85 AB add data units to cursor waves to fix axes labels disappearing when experiements are loaded
-//5.86 AB Optimize dependencies to reduce redraws. 
+//5.86 AB Optimize dependencies to reduce redraws.S
 //			 Add ImagetoolV menu
 //			 Add sendtolabview
 //5.87 AB Add duplicate imagetool
@@ -2066,10 +2065,10 @@ Function ProcessROIDraw(PU) : PopupMenuControl
 			//user makes marquee then presses done
 			break		
 		case 2:		//polygon
-			graphwavedraw/o/L=left/B=bottom proc_ROIy proc_ROIx
+			graphwavedraw/o/L=left/B=bottom proc_ROIy, proc_ROIx
 			break
 		case 3:		//polygon smooth
-			graphwavedraw/f=3/o/L=left/B=bottom proc_ROIy proc_ROIx
+			graphwavedraw/f=3/o/L=left/B=bottom proc_ROIy, proc_ROIx
 			break
 		case 4: //select pixel range by Marquee
 			//user makes marquee then presses done
