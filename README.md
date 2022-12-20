@@ -23,4 +23,4 @@ User Procedures
 
 #edits to ALS code
 - to Tools:Image_Tool5.ipf 
-	added #include “progress window”
+	added #include “progress window”, added commas where igor complained
