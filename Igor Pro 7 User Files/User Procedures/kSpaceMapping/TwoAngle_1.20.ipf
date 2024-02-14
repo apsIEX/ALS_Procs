@@ -488,7 +488,7 @@ function calcAngleData(df)
 			endif
 			
 			if(matchOverlap)
-				make/o/n=(numangle2) $(df+"rght") $(df+"lft") //average data in overlap regions of left and right sides
+				make/o/n=(numangle2) $(df+"rght"), $(df+"lft") //average data in overlap regions of left and right sides
 				wave rght=$(df+"rght"), lft=$(df+"lft")
 				nvar npm=$(df+"numPixelsMatch") //number of pixels to use in overlap region
 				if(i==0)
@@ -1616,8 +1616,8 @@ proc MakekGrid(df,dkx,dky)
 	string df
 	variable dkx=gridkxval()// need to put in separate function because it fails otherwise under "execute"
 	variable dky=gridkyval()
-	prompt dkx,"kx grid spacing [1/Å]"
-	prompt dky,"ky grid spacing [1/Å]"
+	prompt dkx,"kx grid spacing [1/¬Å]"
+	prompt dky,"ky grid spacing [1/¬Å]"
 	pauseupdate
 	$(df+"gridkx")=dkx
 	$(df+"gridky")=dky
