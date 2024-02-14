@@ -43,7 +43,7 @@ end
 	variable/g $(df+"yval") =(ymin+ymax)/2
 	make/n=(dimsize(wv0,0)) $(df+"ph0")
 	make/n=(dimsize(wv1,0)) $(df+"ph1")
-	make/n=(dimsize(wv0,1)) $(df+"pv0x") $(df+"pv0y")
+	make/n=(dimsize(wv0,1)) $(df+"pv0x"), $(df+"pv0y")
 	make/n=(dimsize(wv1,1)) $(df+"pv1x"), $(df+"pv1y")
 	make/n=3 $(df+"p0rgb")={65535,0,0}
 	make/n=3 $(df+"p1rgb")={0,0,65535}
