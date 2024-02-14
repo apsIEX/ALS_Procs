@@ -1287,7 +1287,7 @@ function setupcontrols(df)
 	PopupMenu imgZTOpt,mode=1,proc=ROIColorOption,value=#imgopstring
 	PopupMenu imgVOpt,pos={x0+100,y0+36},size={80,14},title="vert   "
 	PopupMenu imgVOpt,mode=1,proc=ROIColorOption,value=#imgopstring
-	button doneROI, title="Done",pos={x0-60,y+34},size={50,32},proc=ROIDoneEditing,disable=1
+	button doneROI, title="Done",pos={x0-60,y0+34},size={50,32},proc=ROIDoneEditing,disable=1
 	PopupMenu ROIColor title="ROI Color", pos={x0+190, y0+15}, size={100,32}
 	PopupMenu ROIColor proc=ROIColorProc,value="*COLORPOP*"
 	PopupMenu ROIColor popcolor=(ROIColor[0],ROIColor[1],ROIColor[2])
@@ -4253,7 +4253,7 @@ Function Stack_UpdateStackV(ba) : ButtonControl
 				dowindow /c $SWN
 				If (!stringmatch( IgorInfo(2), "Macintosh") )
 					//Display /W=(219,250,540,600)
-					// Windows: scale window width smaller by 72/96Å0.75
+					// Windows: scale window width smaller by 72/96Ã…0.75
 					MoveWindow 219,250,219+(540-219)*0.7,600
 			endif
 			endif
