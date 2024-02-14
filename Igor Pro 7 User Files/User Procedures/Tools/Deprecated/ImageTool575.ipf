@@ -4381,7 +4381,7 @@ Static Function Stack_OffsetStack( df,shift, offset )
 	DO
 		wn=StrFromList(trace_lst, ii, ";")
 		//print wn
-		WAVE w=wn
+		WAVE w=$wn
 		//		ModifyGraph offset(wn)={ii*shift, ii*offset}
 		cmd="ModifyGraph /W="+swn+" offset("+wn+")={"+num2str(ii*shift)+", "+num2str(ii*offset)+"}"
 		execute cmd
